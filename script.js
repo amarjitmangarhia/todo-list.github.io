@@ -9,12 +9,12 @@ addButton.addEventListener("click", function () {
   let txt = itemName.value;
 
   if (txt === "") h3.textContent = "OPPS! Something Is Missing!";
+  else {
+    let li = document.createElement("li");
 
-  let li = document.createElement("li");
+    li.innerHTML = txt;
+    list.insertBefore(li, list.childNodes[1]);
 
-  li.innerHTML = txt;
-
-  list.insertBefore(li, list.childNodes[1]);
-
-  itemName.value = "";
+    itemName.value = "";
+  }
 });
