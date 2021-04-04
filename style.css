@@ -55,6 +55,7 @@ section {
 .element-list {
   padding: 1em;
   background-color: rgba(117, 184, 223, 0.534);
+  margin: 1em;
 }
 
 li {
@@ -86,6 +87,9 @@ li {
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
+  }
+  main {
+    width: 100%;
   }
   .h3-tag {
     display: flex;
