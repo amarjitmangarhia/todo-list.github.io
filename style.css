@@ -117,10 +117,11 @@ li:hover {
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    
   }
   main {
     width: 100%;
+    border-radius: 0;
   }
   .h3-tag {
     display: flex;
