@@ -19,7 +19,7 @@ main {
   background-color: #7dc2af;
   padding: 1em;
   font-family: "Courier New", Courier, monospace;
-  width: 70%;
+  width: 50%;
   height: 100vh;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -28,9 +28,8 @@ main {
 
 section {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
@@ -108,17 +107,15 @@ li:hover {
 .h3-tag {
   position: absolute;
   right: 10px;
-  top: 40px;
+  top: 50px;
   font-size: medium;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: small;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    
-  }
+@media only screen and (max-width: 1240px) {
   main {
     width: 100%;
     border-radius: 0;
@@ -131,4 +128,11 @@ li:hover {
     top: 100px;
     left: 20px;
   }
+  .item-name {
+    max-width: width auto;
+  }
+}
+
+.checked {
+  text-decoration: line-through;
 }
