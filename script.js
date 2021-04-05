@@ -18,3 +18,9 @@ addButton.addEventListener("click", function () {
     itemName.value = "";
   }
 });
+
+list.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
+  }
+});
