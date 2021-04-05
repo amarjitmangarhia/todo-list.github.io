@@ -115,17 +115,13 @@ li:hover {
   font-size: small;
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 600px) {
   main {
     width: 100%;
     border-radius: 0;
     margin-bottom: 10px;
   }
-  footer {
-    width: 100%;
-    border-radius: 0px;
-    margin: auto;
-  }
+
   .h3-tag {
     display: flex;
     flex-direction: column;
@@ -142,9 +138,8 @@ li:hover {
   text-decoration: line-through;
 }
 
-footer {
+.footer {
   display: flex;
-  flex: 1 1 90px;
   padding: 10px;
   color: #fff;
   background-color: #7dc2af;
@@ -155,4 +150,6 @@ footer {
   font-family: "Courier New", Courier, monospace;
   border: 1px solid black;
   color: black;
+  bottom: 10px;
+  left: 25%;
 }
