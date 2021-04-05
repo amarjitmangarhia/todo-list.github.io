@@ -90,6 +90,7 @@ li {
   padding: 1em;
   box-shadow: 2px 2px rgb(228, 122, 122);
   transition: box-shadow 0.5s;
+  word-wrap: break-word;
 }
 
 li:hover {
