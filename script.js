@@ -34,12 +34,14 @@ const listOfItems = document.querySelector(".list-of-items");
 addButton.addEventListener("click", function () {
   if (input.value == "") {
     return;
-  }
-  const html = `<li class="item">
+  } else {
+    const html = `<li class="item">
   <p class="item-name">${input.value}</p>
   <div class="button">✔</div>
 </li>`;
-  listOfItems.insertAdjacentHTML("beforeend", html);
+    listOfItems.insertAdjacentHTML("beforeend", html);
+    floatingBox.style.opacity = "0";
+  }
 });
 
 //show popup
