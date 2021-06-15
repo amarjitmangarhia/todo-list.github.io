@@ -2,32 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>To do list</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main>
-      <section>
-        <i class="fa fa-check"></i>
-        <h1>To Do List</h1>
-        <p style="font-size: large; font-weight: 600; color: rgb(49, 43, 43);">Your List Goes Here...</p>
-      </section>
-      <div class="element-list">
-        <ul id="list">
+    <div class="container">
+      <div class="box">
+        <div class="list-of-items">
+          <div class="tab">To Do List</div>
+          <ul class="ul-style">
+            <li class="item">
+              <p class="item-name">Buy Food</p>
+              <div class="button">✔</div>
+            </li>
+          </ul>
+          <div class="floating-box">
+            <p>Type and Add</p>
+            <input type="text" class="input" placeholder="type..." />
+            <input type="button" class="add" value="Add" />
+          </div>
+          <div class="button-to-add">+</div>
+        </div>
       </div>
-<div class="input-field">
-        <input type="text" placeholder="item name" class="item-name" />
-        <!-- <input type="text" placeholder="quantity" class="item-quantity" /> -->
-        <button class="button">Add</button>
-        <h3 class="h3-tag"></h3>
-      </div>
-    </main>
-    <div class="footer">Made with ❤</div> 	
-    <script src="script.js"></script>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
