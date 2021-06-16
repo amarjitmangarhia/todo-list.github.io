@@ -73,6 +73,10 @@ ul {
   opacity: 0;
 }
 
+.none {
+  display: none;
+}
+
 .button {
   font-size: 25px;
   display: flex;
