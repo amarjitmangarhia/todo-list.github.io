@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-color: brown;
+  background-color: rgb(209, 209, 209);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -85,6 +85,10 @@ button {
   margin-left: 5px;
   cursor: pointer;
   border: none;
+}
+
+button2 {
+  margin-right: 30px;
 }
 
 .button-after {
