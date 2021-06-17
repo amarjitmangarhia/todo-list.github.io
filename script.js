@@ -11,6 +11,7 @@ const hide = document.querySelector(".hide");
 const li = document.querySelector("li");
 const listOfItems = document.querySelector(".to-do-list");
 const button = document.querySelector("button");
+const button2 = document.querySelector("button2");
 
 console.log(button);
 
@@ -23,6 +24,10 @@ myId.addEventListener("click", function (e) {
 
   if (e.target.tagName === "BUTTON") {
     e.target.parentNode.remove();
+  }
+
+  if (e.target.tagName === "BUTTON2") {
+    alert("This feature will be added soon!");
   }
 });
 
