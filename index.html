@@ -11,22 +11,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="box">
-        <div class="list-of-items">
-          <div class="tab">To Do List</div>
-          <ul id="myId">
-            <div class="item">
-              <li>Buy Food</li>
-              <div class="button">✔</div>
-            </div>
-          </ul>
-          <div class="floating-box">
-            <p>Type and Add</p>
-            <input type="text" class="input" placeholder="type..." />
-            <input type="button" class="add" value="Add" />
-          </div>
-          <div class="button-to-add">+</div>
+      <div class="to-do-list">
+        <!-- HEADER -->
+        <div class="header">To Do List</div>
+
+        <!-- LIST OF ITEMS -->
+        <ul id="myId">
+          <li>
+            Buy Food
+            <button>&times;</button>
+          </li>
+        </ul>
+
+        <!-- FLOATING BOX -->
+        <div class="floating-box">
+          <p>Type and Add</p>
+          <input type="text" class="input" placeholder="type..." />
+          <input type="button" class="add" value="Add" />
         </div>
+
+        <!-- ADD BUTTON (+) -->
+        <div class="button-to-add">+</div>
       </div>
     </div>
   </body>
