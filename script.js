@@ -1,6 +1,7 @@
 "use strict";
 
 const add = document.querySelector(".add");
+const title = document.querySelector(".title");
 
 const buttonToAdd = document.querySelector(".button-to-add");
 const floatingBox = document.querySelector(".floating-box");
@@ -12,8 +13,8 @@ const li = document.querySelector("li");
 const listOfItems = document.querySelector(".to-do-list");
 const button = document.querySelector("button");
 const button2 = document.querySelector("button2");
-
-console.log(button);
+let count = 0;
+let responsive = window.matchMedia("(max-width: 500px)");
 
 myId.addEventListener("click", function (e) {
   // ADD CHECKED CLASS
@@ -32,18 +33,29 @@ myId.addEventListener("click", function (e) {
 });
 
 // RENDER LI ON SCREEN
-add.addEventListener("click", function () {
-  if (input.value == "") {
-    return;
-  } else {
-    const html = `<li>
+const renderHtml = function (value) {
+  const html = `<li>
     ${input.value}
     <button>&times;</button>
   </li>`;
-    li.classList.add("none");
-    myId.insertAdjacentHTML("beforeend", html);
-    input.value = "";
-    floatingBox.classList.toggle("hide");
+  li.classList.add("none");
+  myId.insertAdjacentHTML("beforeend", html);
+  input.value = "";
+  floatingBox.classList.toggle("hide");
+  count++;
+  console.log(count);
+  if (count >= 7) {
+    res();
+  }
+};
+
+//EVENT LISTENER FOR ADD BUTTON
+add.addEventListener("click", function () {
+  const inputValue = input.value;
+  if (inputValue == "") {
+    title.textContent = "Field is Empty";
+  } else {
+    renderHtml(inputValue);
   }
 });
 
@@ -51,3 +63,10 @@ add.addEventListener("click", function () {
 buttonToAdd.addEventListener("click", function () {
   floatingBox.classList.toggle("hide");
 });
+
+const res = function () {
+  if (responsive.matches) {
+    buttonToAdd.classList.remove("button-to-add");
+    buttonToAdd.classList.add("button-to-add-mobile");
+  }
+};
