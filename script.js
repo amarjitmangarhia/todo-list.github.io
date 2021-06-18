@@ -10,13 +10,16 @@ const input = document.querySelector("input");
 const myId = document.querySelector("#myId");
 const hide = document.querySelector(".hide");
 const li = document.querySelector("li");
-const lii = document.querySelectorAll("li");
 const listOfItems = document.querySelector(".to-do-list");
 const button = document.querySelector("button");
 const button2 = document.querySelector("button2");
 const p = document.querySelector("p");
 let count = 0;
 let responsive = window.matchMedia("(max-width: 500px)");
+
+//
+const liToCheckTheLengthOfLiItems = document.getElementsByTagName("li");
+//
 
 myId.addEventListener("click", function (e) {
   // ADD CHECKED CLASS
@@ -46,8 +49,7 @@ const renderHtml = function () {
   myId.insertAdjacentHTML("beforeend", html);
   input.value = "";
   hidePopup();
-  count++;
-  if (count >= 7) {
+  if (liToCheckTheLengthOfLiItems.length == 8) {
     res();
   }
 };
@@ -93,3 +95,15 @@ const res = function () {
     buttonToAdd.classList.add("button-to-add-mobile");
   }
 };
+
+// delete
+// const lii = document.getElementsByTagName("li");
+// console.log(lii.length);
+
+// for (let el of lii) {
+//   el.addEventListener("click", () => {
+//     const x = document.createElement("li");
+//     x.textContent = "Buy This";
+//     myId.appendChild(x);
+//   });
+// }
