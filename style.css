@@ -73,6 +73,12 @@ li {
   height: 50px;
 }
 
+li p {
+  word-wrap: break-word;
+  max-width: 200px;
+  overflow: auto;
+}
+
 .checked {
   text-decoration: line-through;
   color: rgb(90, 88, 88);
@@ -93,6 +99,8 @@ button {
 }
 
 button2 {
+  position: absolute;
+  right: 20px;
   margin-right: 30px;
   background-color: white;
   color: black;
@@ -186,7 +194,17 @@ button2 {
   }
 
   .floating-box {
-    width: 220px;
+    width: 280px;
     background-color: rgba(14, 13, 13, 0.966);
+  }
+}
+
+@media (max-width: 300px) {
+  .floating-box {
+    width: 220px;
+  }
+
+  li {
+    width: 250px;
   }
 }
