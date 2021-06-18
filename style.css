@@ -162,6 +162,7 @@ button2 {
 
   .button-to-add {
     right: 0px;
+    bottom: 25px;
     margin-top: 15px;
   }
 }
