@@ -69,6 +69,7 @@ input.addEventListener("keyup", function (e) {
     add.click();
   }
   if (e.keyCode === 27) {
+    input.value = "";
     hidePopup();
   }
 });
