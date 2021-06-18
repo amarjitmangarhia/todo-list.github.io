@@ -2,7 +2,6 @@
 
 const add = document.querySelector(".add");
 const title = document.querySelector(".title");
-
 const buttonToAdd = document.querySelector(".button-to-add");
 const floatingBox = document.querySelector(".floating-box");
 const addButton = document.querySelector(".add");
@@ -16,10 +15,8 @@ const button2 = document.querySelector("button2");
 const p = document.querySelector("p");
 let count = 0;
 let responsive = window.matchMedia("(max-width: 500px)");
-
-//
 const liToCheckTheLengthOfLiItems = document.getElementsByTagName("li");
-//
+const countLi = document.querySelector(".count");
 
 myId.addEventListener("click", function (e) {
   // ADD CHECKED CLASS
@@ -49,6 +46,7 @@ const renderHtml = function () {
   myId.insertAdjacentHTML("beforeend", html);
   input.value = "";
   hidePopup();
+  countLi.textContent = liToCheckTheLengthOfLiItems.length - 1;
   if (liToCheckTheLengthOfLiItems.length == 8) {
     res();
   }
@@ -93,17 +91,8 @@ const res = function () {
   if (responsive.matches) {
     buttonToAdd.classList.remove("button-to-add");
     buttonToAdd.classList.add("button-to-add-mobile");
+
+    countLi.classList.remove("count");
+    countLi.classList.add("count-mobile");
   }
 };
-
-// delete
-// const lii = document.getElementsByTagName("li");
-// console.log(lii.length);
-
-// for (let el of lii) {
-//   el.addEventListener("click", () => {
-//     const x = document.createElement("li");
-//     x.textContent = "Buy This";
-//     myId.appendChild(x);
-//   });
-// }
