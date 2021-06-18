@@ -65,6 +65,7 @@ add.addEventListener("click", function () {
 //SHOW POPUP
 const hidePopup = function () {
   floatingBox.classList.toggle("hide");
+  input.focus();
 };
 
 buttonToAdd.addEventListener("click", hidePopup);
