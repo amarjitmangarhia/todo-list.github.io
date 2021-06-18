@@ -17,7 +17,7 @@ body {
 }
 
 .to-do-list {
-  height: 100vh;
+  height: 100%;
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -89,6 +89,11 @@ button {
 
 button2 {
   margin-right: 30px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 3px 4px 3px 4px;
+  text-align: center;
 }
 
 .button-after {
@@ -153,5 +158,10 @@ button2 {
   .box {
     margin: 0;
     width: 100%;
+  }
+
+  .button-to-add {
+    right: 0px;
+    margin-top: 15px;
   }
 }
