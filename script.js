@@ -14,6 +14,7 @@ const lii = document.querySelectorAll("li");
 const listOfItems = document.querySelector(".to-do-list");
 const button = document.querySelector("button");
 const button2 = document.querySelector("button2");
+const p = document.querySelector("p");
 let count = 0;
 let responsive = window.matchMedia("(max-width: 500px)");
 
@@ -40,10 +41,11 @@ const renderHtml = function () {
   <button>&times;</button>
   <button2>edit</button2>
 </li>`;
-  li.classList.add("hide");
+  // li.classList.add("hide");
+  li.style.display = "none";
   myId.insertAdjacentHTML("beforeend", html);
   input.value = "";
-  floatingBox.classList.toggle("hide");
+  hidePopup();
   count++;
   if (count >= 7) {
     res();
@@ -61,9 +63,11 @@ add.addEventListener("click", function () {
 });
 
 //SHOW POPUP
-buttonToAdd.addEventListener("click", function () {
+const hidePopup = function () {
   floatingBox.classList.toggle("hide");
-});
+};
+
+buttonToAdd.addEventListener("click", hidePopup);
 
 //RESPONSIVE FOR MOBILE
 const res = function () {
