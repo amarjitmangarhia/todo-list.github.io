@@ -67,14 +67,6 @@ li {
   color: rgb(90, 88, 88);
 }
 
-.hide {
-  opacity: 0;
-}
-
-.none {
-  display: none;
-}
-
 button {
   position: absolute;
   right: 10px;
@@ -136,20 +128,21 @@ button2 {
 }
 
 .floating-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+  display: block;
+  text-align: center;
+  background-color: rgba(14, 13, 13, 0.966);
   height: 140px;
   padding: 20px;
   color: white;
-  border-radius: 10px;
-  transition: opacity 0.4s;
+  border-radius: 20px;
+  /* transition: opacity 0.4s; */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.hide {
+  display: none;
 }
 
 .floating-box p {
