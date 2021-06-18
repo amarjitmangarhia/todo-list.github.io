@@ -58,7 +58,7 @@ add.addEventListener("click", function () {
   if (inputValue == "") {
     title.textContent = "Field is Empty";
   } else {
-    input.blur();
+//     input.blur();
     renderHtml(inputValue);
   }
 });
