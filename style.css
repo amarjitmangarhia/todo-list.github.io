@@ -134,29 +134,31 @@ button2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -20px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
   color: rgb(255, 255, 255);
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(187, 59, 59);
   border-radius: 20px;
-  height: 20px;
-  width: 20px;
-  font-size: 20px;
+  height: 17px;
+  width: 17px;
+  font-size: 10px;
 }
 
 .count-mobile {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -20px;
-  left: 55px;
+  position: absolute;
+  right: 130px;
+  bottom: 60px;
   color: rgb(255, 255, 255);
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(187, 59, 59);
+
   border-radius: 20px;
-  height: 20px;
-  width: 20px;
-  font-size: 20px;
+  height: 17px;
+  width: 17px;
+  font-size: 10px;
 }
 
 .button-to-add-mobile {
