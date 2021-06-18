@@ -149,9 +149,9 @@ button2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  right: -50px;
-  top: -25px;
+  position: absolute;
+  margin-right: -12em;
+  margin-top: -5em;
   color: rgb(255, 255, 255);
   background-color: rgb(187, 59, 59);
 
@@ -237,5 +237,8 @@ button2 {
 
   li {
     width: 250px;
+  }
+  .count-mobile {
+    margin-right: -8em;
   }
 }
