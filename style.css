@@ -10,6 +10,7 @@ body {
 
 .container {
   background-color: rgb(209, 209, 209);
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,7 +18,7 @@ body {
 }
 
 .to-do-list {
-  height: 100%;
+  min-height: 100%;
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,7 @@ body {
   margin: 0px 10px 0px 10px;
   background-color: white;
   position: relative;
+  overflow: auto;
 }
 
 .header {
@@ -32,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  height: 50px;
+  min-height: 50px;
   width: 100%;
   background-color: black;
   margin-bottom: 30px;
@@ -114,6 +116,7 @@ button2 {
   position: absolute;
   bottom: 25px;
   right: 25px;
+  /* transform: translate(5.3em, 10.8em); */
   cursor: pointer;
 }
 
@@ -127,10 +130,11 @@ button2 {
   padding: 20px;
   color: white;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 30%;
   transition: opacity 0.4s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .floating-box p {
@@ -160,9 +164,13 @@ button2 {
     width: 100%;
   }
 
-/*   .button-to-add {
+  /* .button-to-add {
     right: 0px;
     bottom: 25px;
     margin-top: 15px;
+    height: 40px;
+    width: 40px;
+    padding: 7px;
+    font-size: 30px;
   } */
 }
