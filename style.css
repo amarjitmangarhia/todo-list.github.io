@@ -117,7 +117,22 @@ button2 {
   bottom: 25px;
   right: 25px;
   cursor: pointer;
-  /* transform: translate(5.3em, 10.8em); */
+}
+
+.button-to-add-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  background-color: black;
+  height: 50px;
+  width: 50%;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .floating-box {
@@ -166,12 +181,5 @@ button2 {
 
   .floating-box {
     width: 220px;
-  }
-
-  .button-to-add {
-    position: relative;
-    left: 10px;
-    margin: 15px;
-
   }
 }
