@@ -168,13 +168,8 @@ button2 {
     width: 220px;
   }
 
-  /* .button-to-add {
-    right: 0px;
-    bottom: 25px;
-    margin-top: 15px;
-    height: 40px;
-    width: 40px;
-    padding: 7px;
-    font-size: 30px;
-  } */
+  .button-to-add {
+    position: relative;
+    left: 10px;
+  }
 }
