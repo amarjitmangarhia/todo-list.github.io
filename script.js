@@ -62,13 +62,20 @@ add.addEventListener("click", function () {
   }
 });
 
+//EVENT LISTENER FOR ENTER KEY ON ADD BUTTON
+input.addEventListener("keyup", function (e) {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    add.click();
+  }
+});
+
 //SHOW POPUP
 const hidePopup = function () {
   if (!floatingBox.classList.contains("hide")) {
-    floatingBox.classList.toggle("hide");
+    floatingBox.classList.add("hide");
   } else {
-    floatingBox.classList.toggle("hide");
-
+    floatingBox.classList.remove("hide");
     input.focus();
   }
 };
