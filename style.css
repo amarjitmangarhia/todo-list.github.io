@@ -171,5 +171,7 @@ button2 {
   .button-to-add {
     position: relative;
     left: 10px;
+    margin: 10px;
+
   }
 }
