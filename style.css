@@ -187,5 +187,6 @@ button2 {
 
   .floating-box {
     width: 220px;
+    background-color: rgba(14, 13, 13, 0.966);
   }
 }
