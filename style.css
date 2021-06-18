@@ -135,7 +135,7 @@ button2 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 1px;
+  top: 0px;
   right: 1px;
   color: rgb(255, 255, 255);
   background-color: rgb(187, 59, 59);
