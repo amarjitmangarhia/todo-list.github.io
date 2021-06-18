@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 0px 0px 0px;
   background-color: white;
   position: relative;
   overflow: auto;
@@ -116,8 +116,8 @@ button2 {
   position: absolute;
   bottom: 25px;
   right: 25px;
-  /* transform: translate(5.3em, 10.8em); */
   cursor: pointer;
+  /* transform: translate(5.3em, 10.8em); */
 }
 
 .floating-box {
@@ -164,7 +164,11 @@ button2 {
     width: 100%;
   }
 
-/*   .button-to-add {
+  .floating-box {
+    width: 220px;
+  }
+
+  /* .button-to-add {
     right: 0px;
     bottom: 25px;
     margin-top: 15px;
