@@ -26,23 +26,33 @@ myId.addEventListener("click", function (e) {
   // REMOVE THE ELEMENT
 
   if (e.target.tagName === "BUTTON") {
-    e.target.parentNode.remove();
+    const x = e.target.closest("li");
+    x.remove();
   }
 
   if (e.target.tagName === "BUTTON2") {
-    alert("This feature will be added Soon!");
+    // alert("This feature will be added Soon!");
+    // console.log(e.target.closest("p"));
+    const p = e.target.closest("p");
+    const a = prompt();
+    console.log(
+      (p.innerHTML = `${a} <button>&times;</button>
+    <button2>edit</button2>`)
+    );
   }
 });
 
 // RENDER LI ON SCREEN
 const renderHtml = function () {
   const html = `<li>
-  <p>${input.value}</p>
-  <button>&times;</button>
-  <button2>edit</button2>
+  <p>
+    ${input.value}
+    <button>&times;</button>
+    <button2>edit</button2>
+  </p>
 </li>`;
   // li.classList.add("hide");
-  li.style.display = "none";
+  // li.style.display = "none";
   myId.insertAdjacentHTML("beforeend", html);
   input.value = "";
   hidePopup();
