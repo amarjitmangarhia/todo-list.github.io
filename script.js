@@ -37,9 +37,10 @@ myId.addEventListener("click", function (e) {
   if (e.target.tagName === "BUTTON2") {
     floatingEdit.style.display = "block";
     isEditOpen = true;
+
     inputOfEdit.focus();
     editButton.addEventListener("click", function () {
-      const p = e.target.closest("p");
+      const p = e.target.closest("li");
       if (inputOfEdit.value === "") return;
       edit(p);
     });
@@ -50,7 +51,7 @@ myId.addEventListener("click", function (e) {
 
 const edit = function (p) {
   try {
-    p.innerHTML = `${inputOfEdit.value} <button>&times;</button>
+    p.innerHTML = `<p>${inputOfEdit.value}</p> <button>&times;</button>
       <button2>edit</button2>`;
     inputOfEdit.value = "";
     floatingEdit.style.display = "none";
@@ -64,10 +65,10 @@ const edit = function (p) {
 const renderHtml = function () {
   const html = `<li>
   <p>
-    ${input.value}
+    ${input.value}</p>
     <button>&times;</button>
     <button2>edit</button2>
-  </p>
+  
 </li>`;
   // li.classList.add("hide");
   // li.style.display = "none";
