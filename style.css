@@ -192,6 +192,42 @@ button2 {
   opacity: 1s;
   transition: 0.5s ease-in-out;
 }
+
+.floating-edit {
+  display: none;
+  text-align: center;
+  background-color: rgba(14, 13, 13, 0.966);
+  height: 140px;
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1s;
+  transition: 0.5s ease-in-out;
+}
+
+.floating-edit input {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.floating-edit p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.floating-edit .edit-button {
+  font-size: 20px;
+  width: 50%;
+  color: black;
+  margin: 0 auto;
+}
+
 .hide {
   opacity: 0;
   transform: translate(-100px, -999px);
