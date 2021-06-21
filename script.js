@@ -40,6 +40,7 @@ myId.addEventListener("click", function (e) {
 
     inputOfEdit.focus();
     editButton.addEventListener("click", function () {
+      console.log(e.target.closest("p").textContent);
       const p = e.target.closest("li");
       if (inputOfEdit.value === "") return;
       edit(p);
@@ -51,7 +52,7 @@ myId.addEventListener("click", function (e) {
 
 const edit = function (p) {
   try {
-    p.innerHTML = `<p>${inputOfEdit.value}</p> <button>&times;</button>
+    p.innerHTML = `<p class = "li-p">${inputOfEdit.value} <button>&times;</button>
       <button2>edit</button2>`;
     inputOfEdit.value = "";
     floatingEdit.style.display = "none";
@@ -64,8 +65,8 @@ const edit = function (p) {
 // RENDER LI ON SCREEN
 const renderHtml = function () {
   const html = `<li>
-  <p>
-    ${input.value}</p>
+  <p class = "li-p">
+    ${input.value}
     <button>&times;</button>
     <button2>edit</button2>
   
