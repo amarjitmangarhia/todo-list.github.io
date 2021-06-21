@@ -17,6 +17,9 @@ let count = 0;
 let responsive = window.matchMedia("(max-width: 500px)");
 const liToCheckTheLengthOfLiItems = document.getElementsByTagName("li");
 const countLi = document.querySelector(".count");
+const floatingEdit = document.querySelector(".floating-edit");
+const inputOfEdit = document.querySelector(".input-of-edit");
+const editButton = document.querySelector(".edit-button");
 
 myId.addEventListener("click", function (e) {
   // ADD CHECKED CLASS
@@ -31,16 +34,28 @@ myId.addEventListener("click", function (e) {
   }
 
   if (e.target.tagName === "BUTTON2") {
-    // alert("This feature will be added Soon!");
-    // console.log(e.target.closest("p"));
-    const p = e.target.closest("p");
-    const a = prompt();
-    console.log(
-      (p.innerHTML = `${a} <button>&times;</button>
-    <button2>edit</button2>`)
-    );
+    floatingEdit.style.display = "block";
+    inputOfEdit.focus();
+    editButton.addEventListener("click", function () {
+      const p = e.target.closest("p");
+      if (inputOfEdit.value === "") return;
+      edit(p);
+    });
   }
 });
+
+//RENDER ELEMENTS ON CLICKING EDIT BUTTON
+
+const edit = function (p) {
+  try {
+    p.innerHTML = `${inputOfEdit.value} <button>&times;</button>
+      <button2>edit</button2>`;
+    inputOfEdit.value = "";
+    floatingEdit.style.display = "none";
+  } catch (ex) {
+    console.log("Something went wrong: " + ex);
+  }
+};
 
 // RENDER LI ON SCREEN
 const renderHtml = function () {
@@ -56,8 +71,8 @@ const renderHtml = function () {
   myId.insertAdjacentHTML("beforeend", html);
   input.value = "";
   hidePopup();
-  countLi.textContent = liToCheckTheLengthOfLiItems.length - 1;
-  if (liToCheckTheLengthOfLiItems.length == 8) {
+  countLi.textContent = liToCheckTheLengthOfLiItems.length;
+  if (liToCheckTheLengthOfLiItems.length == 7) {
     res();
   }
 };
@@ -106,3 +121,5 @@ const res = function () {
     countLi.classList.add("count-mobile");
   }
 };
+
+
