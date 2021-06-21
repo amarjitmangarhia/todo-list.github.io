@@ -20,7 +20,10 @@ const countLi = document.querySelector(".count");
 const floatingEdit = document.querySelector(".floating-edit");
 const inputOfEdit = document.querySelector(".input-of-edit");
 const editButton = document.querySelector(".edit-button");
+<<<<<<< HEAD
 let isEditOpen = false;
+=======
+>>>>>>> 50942ba9650fc9e6ee38fd78e92db6631bdb8da0
 
 myId.addEventListener("click", function (e) {
   // ADD CHECKED CLASS
@@ -36,7 +39,10 @@ myId.addEventListener("click", function (e) {
 
   if (e.target.tagName === "BUTTON2") {
     floatingEdit.style.display = "block";
+<<<<<<< HEAD
     isEditOpen = true;
+=======
+>>>>>>> 50942ba9650fc9e6ee38fd78e92db6631bdb8da0
     inputOfEdit.focus();
     editButton.addEventListener("click", function () {
       const p = e.target.closest("p");
@@ -54,7 +60,10 @@ const edit = function (p) {
       <button2>edit</button2>`;
     inputOfEdit.value = "";
     floatingEdit.style.display = "none";
+<<<<<<< HEAD
     isEditOpen = false;
+=======
+>>>>>>> 50942ba9650fc9e6ee38fd78e92db6631bdb8da0
   } catch (ex) {
     console.log("Something went wrong: " + ex);
   }
@@ -127,6 +136,7 @@ const res = function () {
   }
 };
 
+<<<<<<< HEAD
 /*
 //this piece of code updating mutiple values
 
@@ -157,3 +167,6 @@ const res = function () {
 //     floatingEdit.style.display = "none";
 //   });
 // }
+=======
+
+>>>>>>> 50942ba9650fc9e6ee38fd78e92db6631bdb8da0
