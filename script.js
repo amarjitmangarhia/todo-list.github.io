@@ -15,7 +15,7 @@ const button2 = document.querySelector("button2");
 const p = document.querySelector("p");
 let count = 0;
 let responsive = window.matchMedia("(max-width: 500px)");
-const liToCheckTheLengthOfLiItems = document.getElementsByTagName("li");
+let liToCheckTheLengthOfLiItems = document.getElementsByTagName("li");
 const countLi = document.querySelector(".count");
 const floatingEdit = document.querySelector(".floating-edit");
 const inputOfEdit = document.querySelector(".input-of-edit");
@@ -32,6 +32,12 @@ myId.addEventListener("click", function (e) {
   if (e.target.tagName === "BUTTON") {
     const x = e.target.closest("li");
     x.remove();
+    for (let i = 0; i < liToCheckTheLengthOfLiItems.length; i++) {
+      countLi.textContent = [i + 1];
+    }
+    if (liToCheckTheLengthOfLiItems.length < 1) {
+      countLi.textContent = 0;
+    }
   }
 
   if (e.target.tagName === "BUTTON2") {
@@ -40,7 +46,6 @@ myId.addEventListener("click", function (e) {
 
     inputOfEdit.focus();
     editButton.addEventListener("click", function () {
-      console.log(e.target.closest("p").textContent);
       const p = e.target.closest("li");
       if (inputOfEdit.value === "") return;
       edit(p);
@@ -52,7 +57,7 @@ myId.addEventListener("click", function (e) {
 
 const edit = function (p) {
   try {
-    p.innerHTML = `<p class = "li-p">${inputOfEdit.value} <button>&times;</button>
+    p.innerHTML = `<p>${inputOfEdit.value}</p> <button>&times;</button>
       <button2>edit</button2>`;
     inputOfEdit.value = "";
     floatingEdit.style.display = "none";
@@ -65,8 +70,8 @@ const edit = function (p) {
 // RENDER LI ON SCREEN
 const renderHtml = function () {
   const html = `<li>
-  <p class = "li-p">
-    ${input.value}
+  <p>
+    ${input.value}</p>
     <button>&times;</button>
     <button2>edit</button2>
   
