@@ -24,15 +24,14 @@ let isEditOpen = false;
 let isFloatOpen = false;
 
 function init() {
-  floatingBox.classList.add("hide");
-  for (let i = 1; i < sessionStorage.length; i++) {
-    myId.insertAdjacentHTML(
-      "beforeend",
-      `<li><p>${sessionStorage.getItem(`${i}`)}</p> <button>&times;</button>
-      <button2>edit</button2></li>`
-    );
-  }
-  countLi.textContent = liToCheckTheLengthOfLiItems.length + 1;
+  // for (let i = 1; i < sessionStorage.length; i++) {
+  //   myId.insertAdjacentHTML(
+  //     "beforeend",
+  //     `<li><p>${sessionStorage.getItem(`${i}`)}</p> <button>&times;</button>
+  //     <button2>edit</button2></li>`
+  //   );
+
+  countLi.textContent = liToCheckTheLengthOfLiItems.length;
 }
 
 init();
@@ -47,7 +46,6 @@ myId.addEventListener("click", function (e) {
   if (e.target.tagName === "BUTTON") {
     const x = e.target.closest("li");
     console.log(x);
-    sessionStorage.removeItem("0");
     x.remove();
     for (let i = 0; i < liToCheckTheLengthOfLiItems.length; i++) {
       countLi.textContent = [i + 1];
@@ -83,7 +81,6 @@ const edit = function (p) {
     p.innerHTML = `<p>${inputOfEdit.value}</p> <button>&times;</button>
       <button2>edit</button2>`;
     inputOfEdit.value = "";
-    input.value.blur();
     floatingEdit.style.display = "none";
     isEditOpen = false;
   } catch (ex) {
@@ -93,10 +90,6 @@ const edit = function (p) {
 
 // RENDER LI ON SCREEN
 const renderHtml = function () {
-  sessionStorage.setItem(
-    `${liToCheckTheLengthOfLiItems.length}`,
-    `${input.value}`
-  );
   const html = `<li>
   <p>
     ${input.value}</p>
