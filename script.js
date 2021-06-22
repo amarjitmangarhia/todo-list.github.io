@@ -25,7 +25,7 @@ let isFloatOpen = false;
 
 function init() {
   floatingBox.classList.add("hide");
-  for (let i = 0; i < sessionStorage.length; i++) {
+  for (let i = 1; i < sessionStorage.length; i++) {
     myId.insertAdjacentHTML(
       "beforeend",
       `<li><p>${sessionStorage.getItem(`${i}`)}</p> <button>&times;</button>
@@ -109,7 +109,7 @@ const renderHtml = function () {
   myId.insertAdjacentHTML("beforeend", html);
   input.value = "";
   hidePopup();
-  // countLi.textContent = liToCheckTheLengthOfLiItems.length;
+  countLi.textContent = liToCheckTheLengthOfLiItems.length;
   if (liToCheckTheLengthOfLiItems.length == 7) {
     res();
   }
