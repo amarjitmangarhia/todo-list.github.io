@@ -197,6 +197,7 @@ button2 {
   display: none;
   text-align: center;
   background-color: rgba(14, 13, 13, 0.966);
+  background: black;
   height: 140px;
   padding: 20px;
   color: white;

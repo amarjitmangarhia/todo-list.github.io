@@ -21,6 +21,7 @@ const floatingEdit = document.querySelector(".floating-edit");
 const inputOfEdit = document.querySelector(".input-of-edit");
 const editButton = document.querySelector(".edit-button");
 let isEditOpen = false;
+let isFloatOpen = false;
 
 myId.addEventListener("click", function (e) {
   // ADD CHECKED CLASS
@@ -41,14 +42,18 @@ myId.addEventListener("click", function (e) {
   }
 
   if (e.target.tagName === "BUTTON2") {
+    floatingBox.classList.add("hide");
     floatingEdit.style.display = "block";
     isEditOpen = true;
 
     inputOfEdit.focus();
     editButton.addEventListener("click", function () {
       const p = e.target.closest("li");
-      if (inputOfEdit.value === "") return;
-      edit(p);
+      if (inputOfEdit.value === "") {
+        floatingEdit.style.display = "none";
+      } else {
+        edit(p);
+      }
     });
   }
 });
@@ -98,10 +103,12 @@ add.addEventListener("click", function () {
 });
 
 //EVENT LISTENER FOR ENTER KEY ON ADD BUTTON
+
 input.addEventListener("keyup", function (e) {
   if (e.keyCode === 13) {
     e.preventDefault();
     add.click();
+    editButton.click();
   }
   if (e.keyCode === 27) {
     input.value = "";
@@ -133,34 +140,3 @@ const res = function () {
     countLi.classList.add("count-mobile");
   }
 };
-
-/*
-//this piece of code updating mutiple values
-
-  if (e.target.tagName === "BUTTON2") {
-    const p = e.target.closest("p");
-    floatingEdit.style.display = "block";
-
-    editButton.addEventListener("click", function () {
-      console.log(inputOfEdit.value);
-      p.innerHTML = `<p>${inputOfEdit.value} <button>&times;</button>
-    <button2>edit</button2></p>`;
-      floatingEdit.style.display = "none";
-    });
-  }
-
-*/
-
-//this piece of code showing error of null
-// if (e.target.tagName === "BUTTON2") {
-//   floatingEdit.style.display = "block";
-
-//   editButton.addEventListener("click", function () {
-//     const p = e.target.closest("p");
-//     let inputValue = inputOfEdit.value;
-//     p.innerHTML = `${inputValue} <button>&times;</button>
-//       <button2>edit</button2>`;
-//     inputValue = "";
-//     floatingEdit.style.display = "none";
-//   });
-// }
