@@ -32,7 +32,7 @@ function init() {
       <button2>edit</button2></li>`
     );
   }
-  countLi.textContent = liToCheckTheLengthOfLiItems.length;
+  countLi.textContent = liToCheckTheLengthOfLiItems.length + 1;
 }
 
 init();
